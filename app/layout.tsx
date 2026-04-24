@@ -1,16 +1,23 @@
 import type { Metadata } from 'next';
-import { Plus_Jakarta_Sans } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import './globals.css';
 import { Toaster } from 'react-hot-toast';
 import { ThemeProvider } from '@/contexts/ThemeContext';
 import { AuthContextProvider } from '@/contexts/AuthContext';
 
-const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'], variable: '--font-geist-sans' });
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'Find Me RX - Medication Access Platform',
   description: 'Find nearby pharmacies, search medications, and order prescriptions',
-  viewport: 'width=device-width, initial-scale=1',
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
 };
 
 export default function RootLayout({
@@ -20,7 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={jakarta.className}>
+      <body className={inter.className}>
         <ThemeProvider>
           <AuthContextProvider>
             {children}

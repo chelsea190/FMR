@@ -77,8 +77,14 @@ export default function SignUpPage() {
         throw new Error(data.message || 'Failed to create account');
       }
 
+      if (data.requiresEmailVerification) {
+        toast.success('Account created. Please check your email to confirm it.');
+        router.push(`/check-email?email=${encodeURIComponent(formData.email)}`);
+        return;
+      }
+
       toast.success('Account created successfully!');
-      router.push('/dashboard'); // Redirect to dashboard after successful signup
+      router.push('/dashboard');
     } catch (error: any) {
       setErrors({ general: error.message });
       toast.error(error.message);

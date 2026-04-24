@@ -2,15 +2,10 @@ import { NextRequest, NextResponse } from 'next/server';
 import { AppRole, mapSupabaseUser, supabase } from '@/lib/supabase';
 
 const allowedRoles: AppRole[] = ['patient', 'pharmacist', 'doctor'];
-const cookieOptions = {
-  httpOnly: true,
-  secure: process.env.NODE_ENV === 'production',
-  sameSite: 'lax' as const,
-  path: '/',
-};
 
 export async function POST(req: NextRequest) {
   try {
+    const origin = req.headers.get('origin') || req.nextUrl.origin;
     const { firstName, lastName, email, password, userType } = await req.json();
 
     if (!firstName || !lastName || !email || !password || !userType) {
@@ -25,10 +20,13 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ message: 'Password must be at least 8 characters' }, { status: 400 });
     }
 
+    const normalizedEmail = String(email).trim().toLowerCase();
+
     const { data, error } = await supabase.auth.signUp({
-      email: String(email).trim().toLowerCase(),
+      email: normalizedEmail,
       password,
       options: {
+        emailRedirectTo: `${origin}/auth/confirmed`,
         data: {
           firstName: String(firstName).trim(),
           lastName: String(lastName).trim(),
@@ -46,24 +44,14 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ message: 'Unable to create account' }, { status: 400 });
     }
 
-    const response = NextResponse.json({
-      message: data.session ? 'Account created successfully' : 'Account created. Please verify your email before signing in.',
+    // Always send newly registered users to the verification screen.
+    // This prevents an auto-session from taking them straight to the dashboard when email confirmation is enabled/disabled differently across Supabase environments.
+    return NextResponse.json({
+      message: 'Account created. Please verify your email before signing in.',
       user: mapSupabaseUser(data.user),
-      requiresEmailVerification: !data.session,
+      requiresEmailVerification: true,
+      verificationEmail: normalizedEmail,
     }, { status: 201 });
-
-    if (data.session) {
-      response.cookies.set('auth_token', data.session.access_token, {
-        ...cookieOptions,
-        maxAge: data.session.expires_in || 60 * 60,
-      });
-      response.cookies.set('refresh_token', data.session.refresh_token, {
-        ...cookieOptions,
-        maxAge: 60 * 60 * 24 * 30,
-      });
-    }
-
-    return response;
   } catch (error) {
     console.error('Error during sign-up:', error);
     return NextResponse.json({ message: 'Internal server error' }, { status: 500 });
