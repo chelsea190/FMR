@@ -1,0 +1,36 @@
+{"location":"DashboardLayout.tsx:BEGIN","message":"DashboardLayout component started","hypothesisId":"A","timestamp":1769220035267,"sessionId":"debug-session"}
+{"location":"DashboardLayout.tsx:BEGIN","message":"DashboardLayout component started","hypothesisId":"A","timestamp":1769220036024,"sessionId":"debug-session"}
+{"location":"DashboardLayout.tsx:BEGIN","message":"DashboardLayout component started","hypothesisId":"A","timestamp":1769220041015,"sessionId":"debug-session"}
+{"location":"DashboardLayout.tsx:BEGIN","message":"DashboardLayout component started","hypothesisId":"A","timestamp":1769220042116,"sessionId":"debug-session"}
+{"location":"DashboardLayout.tsx:BEGIN","message":"DashboardLayout component started","hypothesisId":"A","timestamp":1769220042902,"sessionId":"debug-session"}
+{"location":"DashboardLayout.tsx:BEGIN","message":"DashboardLayout component started","hypothesisId":"A","timestamp":1769220046220,"sessionId":"debug-session"}
+{"location":"DashboardLayout.tsx:BEGIN","message":"DashboardLayout component started","hypothesisId":"A","timestamp":1769220046827,"sessionId":"debug-session"}
+{"location":"DashboardLayout.tsx:BEGIN","message":"DashboardLayout component started","hypothesisId":"A","timestamp":1769220188380,"sessionId":"debug-session"}
+{"location":"DashboardLayout.tsx:BEGIN","message":"DashboardLayout component started","hypothesisId":"A","timestamp":1769220784812,"sessionId":"debug-session"}
+{"location":"DashboardLayout.tsx:BEGIN","message":"DashboardLayout component started","hypothesisId":"A","timestamp":1769220806398,"sessionId":"debug-session"}
+{"location":"DashboardLayout.tsx:BEGIN","message":"DashboardLayout component started","hypothesisId":"A","timestamp":1769220807469,"sessionId":"debug-session"}
+{"location":"DashboardLayout.tsx:BEGIN","message":"DashboardLayout component started","hypothesisId":"A","timestamp":1769220857351,"sessionId":"debug-session"}
+{"location":"DashboardLayout.tsx:BEGIN","message":"DashboardLayout component started","hypothesisId":"A","timestamp":1769220857720,"sessionId":"debug-session"}
+{"location":"DashboardLayout.tsx:BEGIN","message":"DashboardLayout component started","hypothesisId":"A","timestamp":1769220857752,"sessionId":"debug-session"}
+{"location":"DashboardLayout.tsx:BEGIN","message":"DashboardLayout component started","hypothesisId":"A","timestamp":1769220858909,"sessionId":"debug-session"}
+{"location":"DashboardLayout.tsx:BEGIN","message":"DashboardLayout component started","hypothesisId":"A","timestamp":1769220859067,"sessionId":"debug-session"}
+{"location":"DashboardLayout.tsx:BEGIN","message":"DashboardLayout component started","hypothesisId":"A","timestamp":1769220860412,"sessionId":"debug-session"}
+{"location":"DashboardLayout.tsx:BEGIN","message":"DashboardLayout component started","hypothesisId":"A","timestamp":1769220860711,"sessionId":"debug-session"}
+{"location":"DashboardLayout.tsx:BEGIN","message":"DashboardLayout component started","hypothesisId":"A","timestamp":1769220874500,"sessionId":"debug-session"}
+{"location":"DashboardLayout.tsx:BEGIN","message":"DashboardLayout component started","hypothesisId":"A","timestamp":1769220875190,"sessionId":"debug-session"}
+{"location":"DashboardLayout.tsx:BEGIN","message":"DashboardLayout component started","hypothesisId":"A","timestamp":1769221069917,"sessionId":"debug-session"}
+{"location":"DashboardLayout.tsx:BEGIN","message":"DashboardLayout component started","hypothesisId":"A","timestamp":1769221071906,"sessionId":"debug-session"}
+{"location":"DashboardLayout.tsx:BEGIN","message":"DashboardLayout component started","hypothesisId":"A","timestamp":1769221072707,"sessionId":"debug-session"}
+{"location":"app/(dashboard)/dashboard/chat/page.tsx:18","message":"chat page loaded, checking responsiveness","data":{"isMobile":true,"screenWidth":412,"conversationsCount":0},"timestamp":1769221160486,"sessionId":"debug-session","runId":"debug-run-4","hypothesisId":"CHAT-RESPONSIVENESS"}
+{"location":"app/(dashboard)/dashboard/chat/page.tsx:18","message":"chat page loaded, checking responsiveness","data":{"isMobile":true,"screenWidth":412,"conversationsCount":0},"timestamp":1769221160498,"sessionId":"debug-session","runId":"debug-run-4","hypothesisId":"CHAT-RESPONSIVENESS"}
+{"location":"DashboardLayout.tsx:BEGIN","message":"DashboardLayout component started","hypothesisId":"A","timestamp":1769221382192,"sessionId":"debug-session"}
+{"location":"DashboardLayout.tsx:BEGIN","message":"DashboardLayout component started","hypothesisId":"A","timestamp":1769221384463,"sessionId":"debug-session"}
+{"location":"DashboardLayout.tsx:BEGIN","message":"DashboardLayout component started","hypothesisId":"A","timestamp":1769221385043,"sessionId":"debug-session"}
+{"location":"DashboardLayout.tsx:BEGIN","message":"DashboardLayout component started","hypothesisId":"A","timestamp":1769221385412,"sessionId":"debug-session"}
+{"location":"DashboardLayout.tsx:BEGIN","message":"DashboardLayout component started","hypothesisId":"A","timestamp":1769221388040,"sessionId":"debug-session"}
+{"location":"DashboardLayout.tsx:BEGIN","message":"DashboardLayout component started","hypothesisId":"A","timestamp":1769221388960,"sessionId":"debug-session"}
+{"location":"DashboardLayout.tsx:BEGIN","message":"DashboardLayout component started","hypothesisId":"A","timestamp":1769221393397,"sessionId":"debug-session"}
+{"location":"DashboardLayout.tsx:BEGIN","message":"DashboardLayout component started","hypothesisId":"A","timestamp":1769221393781,"sessionId":"debug-session"}
+{"location":"DashboardLayout.tsx:BEGIN","message":"DashboardLayout component started","hypothesisId":"A","timestamp":1769224278722,"sessionId":"debug-session"}
+{"location":"app/(dashboard)/dashboard/chat/page.tsx:18","message":"chat page loaded, checking responsiveness","data":{"isMobile":true,"screenWidth":768,"conversationsCount":0},"timestamp":1769224442803,"sessionId":"debug-session","runId":"debug-run-4","hypothesisId":"CHAT-RESPONSIVENESS"}
+{"location":"app/(dashboard)/dashboard/chat/page.tsx:18","message":"chat page loaded, checking responsiveness","data":{"isMobile":true,"screenWidth":768,"conversationsCount":0},"timestamp":1769224442814,"sessionId":"debug-session","runId":"debug-run-4","hypothesisId":"CHAT-RESPONSIVENESS"}
