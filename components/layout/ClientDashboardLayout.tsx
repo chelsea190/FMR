@@ -114,18 +114,18 @@ export default function ClientDashboardLayout({
       </aside>
 
       <div
-        className={`fixed inset-0 z-50 lg:hidden ${sidebarOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}
+        className={`fixed inset-0 z-50 lg:hidden ${sidebarOpen ? "pointer-events-auto" : "pointer-events-none"}`}
         aria-hidden={!sidebarOpen}
       >
         <button
           type="button"
           aria-label="Close sidebar"
           onClick={() => setSidebarOpen(false)}
-          className={`absolute inset-0 bg-slate-950/45 backdrop-blur-sm transition-opacity ${sidebarOpen ? 'opacity-100' : 'opacity-0'}`}
+          className={`absolute inset-0 bg-slate-950/45 backdrop-blur-sm transition-opacity ${sidebarOpen ? "opacity-100" : "opacity-0"}`}
         />
         <aside
           className={`absolute inset-y-0 left-0 w-[min(18rem,85vw)] border-r border-emerald-100 bg-white p-5 shadow-2xl transition-transform duration-300 dark:border-slate-800 dark:bg-slate-950 ${
-            sidebarOpen ? 'translate-x-0' : '-translate-x-full'
+            sidebarOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >
           <div className="mb-6 flex items-center justify-end">
@@ -155,11 +155,14 @@ export default function ClientDashboardLayout({
               <Menu className="h-6 w-6" />
             </button>
 
-            <Link href={base} className="flex min-w-0 flex-1 items-center gap-2">
+            <Link
+              href={base}
+              className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2"
+            >
               <span className="grid h-9 w-9 place-items-center rounded-xl bg-emerald-600 text-white">
                 <Heart className="h-5 w-5" />
               </span>
-              <span className="truncate font-black tracking-tight">FindMeRx</span>
+              <span className="font-black tracking-tight">FindMeRx</span>
             </Link>
 
             <span className="max-w-[35vw] truncate text-right text-xs font-medium text-slate-500 dark:text-slate-400">

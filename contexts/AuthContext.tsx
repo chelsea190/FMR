@@ -37,12 +37,19 @@ export function AuthContextProvider({ children }: { children: React.ReactNode })
   useEffect(() => { refreshUser(); }, [refreshUser]);
 
   const login = useCallback(async (email: string, password: string) => {
-    const response = await fetch('/api/auth/login', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, password }),
-    });
-    const data = await response.json();
+    let response: Response;
+    try {
+      response = await fetch('/api/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password }),
+      });
+    } catch (error) {
+      console.error('Login request failed:', error);
+      throw new Error('Could not reach the login server. Make sure the app is running with npm run dev:lan and open it with http://172.20.10.5:3000.');
+    }
+
+    const data = await response.json().catch(() => ({}));
     if (!response.ok) throw new Error(data.message || 'Login failed');
     setUser(data.user);
     toast.success('Signed in successfully');
